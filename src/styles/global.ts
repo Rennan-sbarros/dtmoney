@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-    :root{
+    /* :root{
         --background: #f0f2f5;
         --red: #E52E4D;
         --green: #33cc95;
@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
         --text-body: #969cb3;
         
         --shape: #ffffff;
-    }
+    } */
         
     * {
         margin: 0;

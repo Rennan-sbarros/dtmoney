@@ -7,6 +7,8 @@ import { NewTransactionModal } from './components/NewTransactionModal';
 import { TransactionsProvider } from './hooks/useTransactions';
 
 import { GlobalStyle } from "./styles/global";
+import { LightStyle } from "./styles/themes/light";
+import { DarkStyle } from "./styles/themes/dark";
 
 Modal.setAppElement('#root');
 
@@ -33,6 +35,8 @@ export function App() {
       />
 
       <GlobalStyle />
+      <LightStyle />
+      <DarkStyle />
     </TransactionsProvider>
   );
 }
