@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { usePersistedState } from './hooks/usePersistedState';
 import Modal from 'react-modal';
 
 import { Dashboard } from "./components/Dashboard";
@@ -16,7 +17,7 @@ Modal.setAppElement('#root');
 export function App() {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
   
-  const [theme, setTheme] = useState(light);
+  const [theme, setTheme] = usePersistedState('theme', light);
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light)
