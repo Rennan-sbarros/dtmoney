@@ -3,9 +3,8 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
     /* :root{
         --background: #f0f2f5;
-        --red: #E52E4D;
         --green: #33cc95;
-        --blue:  #5429cc;
+        --background-header: #5429cc;
 
         --blue-light: #6933ff;
 
@@ -13,8 +12,8 @@ export const GlobalStyle = createGlobalStyle`
         --text-body: #969cb3;
         
         --shape: #ffffff;
-    } */
-        
+    }
+    */    
     * {
         margin: 0;
         padding: 0;
@@ -33,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: var(--background);
+        background: ${props => props.theme.colors.background};
         -webkit-font-smoothing: antialiased;
     }
 
@@ -73,7 +72,7 @@ export const GlobalStyle = createGlobalStyle`
     .react-modal-content {
         width: 100%;
         max-width: 576px;
-        background: var(--background);
+        background: ${props => props.theme.colors.background};
         padding: 3rem;
         position: relative;
         border-radius: 0.24rem;

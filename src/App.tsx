@@ -7,14 +7,21 @@ import { NewTransactionModal } from './components/NewTransactionModal';
 import { TransactionsProvider } from './hooks/useTransactions';
 
 import { GlobalStyle } from "./styles/global";
-import { LightStyle } from "./styles/themes/light";
-import { DarkStyle } from "./styles/themes/dark";
+import { ThemeProvider } from "styled-components";
+import light from './styles/themes/light';
+import dark from './styles/themes/dark';
 
 Modal.setAppElement('#root');
 
 export function App() {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
   
+  const [theme, setTheme] = useState(light);
+
+  const toggleTheme = () => {
+    setTheme(theme.title === 'light' ? dark : light)
+  };
+
   function handleOpenNewTransactionModal() {
       setIsNewTransactionModalOpen(true);
   }
@@ -24,19 +31,20 @@ export function App() {
   }
 
   return (
-    <TransactionsProvider>
-      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
+    <ThemeProvider theme={theme}>
+      <TransactionsProvider>
+        <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
 
-      <Dashboard />
+        <Dashboard toggleTheme={toggleTheme}/>
 
-      <NewTransactionModal 
-        isOpen={isNewTransactionModalOpen}
-        onRequestClose={handleCloseNewTransactionModal}
-      />
+        <NewTransactionModal 
+          isOpen={isNewTransactionModalOpen}
+          onRequestClose={handleCloseNewTransactionModal}
+        />
 
-      <GlobalStyle />
-      <LightStyle />
-      <DarkStyle />
-    </TransactionsProvider>
+        <GlobalStyle />
+        
+      </TransactionsProvider>
+    </ThemeProvider>
   );
 }

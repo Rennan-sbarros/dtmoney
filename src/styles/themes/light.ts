@@ -1,17 +1,17 @@
-import { createGlobalStyle } from "styled-components";
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+    title: 'light',
 
-export const LightStyle = createGlobalStyle`
-    :root{
-        --background: #f0f2f5;
-        --red: #E52E4D;
-        --green: #33cc95;
-        --blue:  #5429cc;
+    colors: {
+        background: '#f0f2f5',
+        green: '#33cc95',
+        backgroundHeader: '#5429cc',
 
-        --blue-light: #6933ff;
+        blueLight: '#6933ff',
 
-        --text-title: #363f5f;
-        --text-body: #969cb3;
+        textTitle: '#363f5f',
+        textBody: '#969cb3',
         
-        --shape: #ffffff;
+        shape: '#ffffff',
     }
-`
+};
