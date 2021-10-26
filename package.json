@@ -2,7 +2,6 @@
   "name": "dtmoney",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rennan-sbarros.github.io/dtmoney/",
   "dependencies": {
     "axios": "^0.21.0",
     "cors": "^2.8.5",
@@ -31,8 +30,6 @@
     "typescript": "^4.1.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

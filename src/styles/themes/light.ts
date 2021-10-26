@@ -3,7 +3,7 @@ export default {
     title: 'light',
 
     colors: {
-        background: 'red',
+        background: '#f0f2f5',
         green: '#33cc95',
         backgroundHeader: '#5429cc',
 
