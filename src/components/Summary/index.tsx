@@ -24,7 +24,7 @@ export function Summary() {
         withdraws: 0,
         total: 0,
     })
-
+    
     return (
         <Container>
             <div>
