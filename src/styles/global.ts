@@ -30,10 +30,6 @@ export const GlobalStyle = createGlobalStyle`
             font-size: 87.5%; // 14px
 
         }
-
-        @media (max-width: 720px) {
-            width: 447px;
-        }
     }
 
     body {
