@@ -33,5 +33,19 @@ export const Container = styled.div`
                 color: red;
             }
         }
+
+        @media screen and (max-width:720px) {
+        table {
+            th {
+                padding: 0;
+            }
+            td {
+                padding: 0;
+            }
+        }
+        .chart-content {
+            display:none;
+            }
+        }
     }
 `;
