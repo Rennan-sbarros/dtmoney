@@ -38,6 +38,6 @@ export const Container = styled.div`
 
     @media screen and (max-width:720px) {
         display:flex;
-        flex-direction:column;        
+        flex-direction: column;
     }
 `;

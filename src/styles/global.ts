@@ -28,6 +28,11 @@ export const GlobalStyle = createGlobalStyle`
 
         @media (min-width: 720px) {
             font-size: 87.5%; // 14px
+
+        }
+
+        @media (max-width: 720px) {
+            width: 447px;
         }
     }
 
