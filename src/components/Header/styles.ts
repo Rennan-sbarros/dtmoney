@@ -13,7 +13,11 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    button {
+    > div {
+        display: flex;
+        gap: 1.5rem;
+
+        button {
         font-size: 1rem;
         color: #FFF;
         background: ${props => props.theme.colors.blueLight};
@@ -27,5 +31,15 @@ export const Content = styled.div`
         }
 
         transition: filter 0.2s;
+    }
+}
+    @media screen and (max-width:720px) {
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            margin-top: 1rem;
+        }
     }
 `;

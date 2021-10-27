@@ -35,4 +35,9 @@ export const Container = styled.div`
             color: #FFF;
         }
     }
+
+    @media screen and (max-width:720px) {
+        display:flex;
+        flex-direction:column;        
+    }
 `;
