@@ -26,7 +26,7 @@ export const Container = styled.div`
             }
 
             &.deposit {
-                color: ${props => props.theme.colors.green};
+                color: #33cc95;
             }
 
             &.withdraw {
