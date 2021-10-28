@@ -9,6 +9,7 @@ export const Content = styled.div`
     margin: 0 auto;
 
     padding: 2rem 1rem 12rem;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,13 +34,24 @@ export const Content = styled.div`
         transition: filter 0.2s;
     }
 }
+    .mode-dark{
+        margin-top: 0.7rem;
+    }
+
     @media screen and (max-width:720px) {
         flex-direction:column;
         align-items: center;
         justify-content: center;
 
+        padding: 2rem 1rem 9.5rem;
+        
         button {
             margin-top: 1rem;
+        }
+
+        .mode-dark{
+            margin-top: 2rem;
+            display: grid;
         }
     }
 `;

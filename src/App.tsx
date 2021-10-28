@@ -34,9 +34,9 @@ export function App() {
   return (
     <ThemeProvider theme={theme}>
       <TransactionsProvider>
-        <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
+        <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}  toggleTheme={toggleTheme} />
 
-        <Dashboard toggleTheme={toggleTheme}/>
+        <Dashboard />
 
         <NewTransactionModal 
           isOpen={isNewTransactionModalOpen}

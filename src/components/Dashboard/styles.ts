@@ -7,6 +7,5 @@ export const Container = styled.main`
 
     .theme-color{
        margin-top: 2rem;
-       
     }
 `;
